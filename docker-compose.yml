@@ -3,7 +3,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: islasgeci/templater:latest
+    image: islasgeci/gfwr_workshop:latest
     command: bash
     environment:
       GFW_TOKEN: $GFW_TOKEN
