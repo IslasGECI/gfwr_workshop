@@ -1,4 +1,4 @@
-Package: templater
+Package: gfwr.geci
 Title: Template for R projects
 Authors@R: c(
     person(given = "Ciencia de Datos",
@@ -7,7 +7,7 @@ Authors@R: c(
            email = "ciencia.datos@islas.org.mx"
            ))
 Config/testthat/edition: 3
-Description: Plantilla de Ciencia de Datos en GECI para proyectos en R
+Description: Access data from Global Fishing Watch APIs 
 Encoding: UTF-8
 Imports:
     R6,

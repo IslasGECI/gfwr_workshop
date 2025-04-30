@@ -1,13 +1,13 @@
 <a href="https://www.islas.org.mx"><img src="https://www.islas.org.mx/img/logo.svg" align="right" width="256" /></a>
 
 # Template for R projects
-[![codecov](https://codecov.io/gh/IslasGECI/templater/graph/badge.svg?token=wyxnwZypMA)](https://codecov.io/gh/IslasGECI/templater)
+[![codecov](https://codecov.io/gh/IslasGECI/gfwr_workshop/graph/badge.svg?token=wyxnwZypMA)](https://codecov.io/gh/IslasGECI/templater)
 ![example branch
-parameter](https://github.com/IslasGECI/templater/actions/workflows/actions.yml/badge.svg)
-![licencia](https://img.shields.io/github/license/IslasGECI/templater)
-![languages](https://img.shields.io/github/languages/top/IslasGECI/templater)
-![commits](https://img.shields.io/github/commit-activity/y/IslasGECI/templater)
-![R-version](https://img.shields.io/github/r-package/v/IslasGECI/templater)
+parameter](https://github.com/IslasGECI/gfwr_workshop/actions/workflows/actions.yml/badge.svg)
+![licencia](https://img.shields.io/github/license/IslasGECI/gfwr_workshop)
+![languages](https://img.shields.io/github/languages/top/IslasGECI/gfwr_workshop)
+![commits](https://img.shields.io/github/commit-activity/y/IslasGECI/gfwr_workshop)
+![R-version](https://img.shields.io/github/r-package/v/IslasGECI/gfwr_workshop)
 
 ## Step to use
 - Rename links in `README`.

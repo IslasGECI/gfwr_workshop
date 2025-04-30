@@ -1,4 +1,3 @@
-version: "3.1"
 services:
   islasgeci:
     build:
@@ -6,5 +5,8 @@ services:
       dockerfile: Dockerfile
     image: islasgeci/templater:latest
     command: bash
+    environment:
+      GFW_TOKEN: $GFW_TOKEN
     volumes:
       - $PWD:/workdir
+
