@@ -5,7 +5,7 @@ library(tmap)
 
 # se pueden hacer búsquedas para áreas predefinidas (EEZ, areas marinas protegidas MPA e RFMOs/Orops)
 
-# ?get_raster()
+# ?gfw_ais_fishing_hours()
 # region_source = "EEZ
 # region = um código!
 
@@ -15,7 +15,7 @@ gfw_region_id(region = "Peru",
 #código 8432
 peru <- 8432
 # enero marzo de 2023.
-peru_fisheff <- get_raster(spatial_resolution = 'LOW',
+peru_fisheff <- gfw_ais_fishing_hours(spatial_resolution = 'LOW',
                            temporal_resolution = 'MONTHLY',
                            start_date = '2023-01-01',
                            end_date = '2023-04-01',
@@ -27,7 +27,7 @@ peru_fisheff
 # coordenadas, time range, vessel ids, apparent fishing hours
 
 # LOW = 0.1 grau, HIGH = 0.01 grau
-peru_fisheff <- get_raster(spatial_resolution = 'HIGH',
+peru_fisheff <- gfw_ais_fishing_hours(spatial_resolution = 'HIGH',
                              temporal_resolution = 'MONTHLY',
                              start_date = '2023-01-01',
                              end_date = '2023-04-01',
@@ -41,7 +41,7 @@ peru_fisheff # mucha más info
 #resolución
 
 # time range va a mostrar apenas el año, mes o día de ocurrencia
-peru_fisheff <- get_raster(spatial_resolution = 'LOW',
+peru_fisheff <- gfw_ais_fishing_hours(spatial_resolution = 'LOW',
                            temporal_resolution = 'DAILY',
                            start_date = '2021-01-01',
                            end_date = '2021-10-01',
@@ -53,7 +53,7 @@ peru_fisheff
 # group_by = "VESSEL_ID" "GEARTYPE" and "FLAGANDGEARTYPE"
 #todas las opciones van a devolver diferentes columnas
 
-peru_fisheff <- get_raster(spatial_resolution = 'LOW',
+peru_fisheff <- gfw_ais_fishing_hours(spatial_resolution = 'LOW',
                            temporal_resolution = 'MONTHLY',
                            start_date = '2021-01-01',
                            end_date = '2021-10-01',
@@ -66,7 +66,7 @@ peru_fisheff
 
 # tambien se puede filtrar y seleccionar
 
-ECU_en_PER <- get_raster(spatial_resolution = 'LOW',
+ECU_en_PER <- gfw_ais_fishing_hours(spatial_resolution = 'LOW',
                              temporal_resolution = 'MONTHLY',
                              start_date = '2021-01-01',
                              end_date = '2021-10-01',
@@ -108,7 +108,7 @@ gfw_test_shape
 #sf::read_sf()
 
 
-fishing_effort <- get_raster(spatial_resolution = 'LOW',
+fishing_effort <- gfw_ais_fishing_hours(spatial_resolution = 'LOW',
                              temporal_resolution = 'MONTHLY',
                              start_date = '2021-01-01',
                              end_date = '2021-10-01',
