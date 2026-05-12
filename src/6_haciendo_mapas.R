@@ -10,6 +10,7 @@ library(rnaturalearth)
 library(rnaturalearthdata)
 library(glue)
 library(ggplot2)
+library(gfwr)
 
 # Crea un tema de ggplot2 para los mapas
 
@@ -35,10 +36,10 @@ start_date <- '2021-01-01'
 end_date <- '2021-04-01'
 
 # La EEZ de Peru es 8432
-get_region_id(region_name = "Peru", region_source = "EEZ")
+gfw_region_id(region = "Peru", region_source = "EEZ")
 
 
-peru_fisheff <- get_raster(spatial_resolution = 'LOW',
+peru_fisheff <- gfw_ais_fishing_hours(spatial_resolution = 'LOW',
                              temporal_resolution = 'MONTHLY',
                              start_date = '2021-01-01',
                              end_date = '2021-10-01',
@@ -76,7 +77,7 @@ peru_fisheff %>%
 
 mi_shape <- sf::read_sf("/workdir/src/data/test_shape.shp")
 
-fishing_effort <- get_raster(spatial_resolution = 'LOW',
+fishing_effort <- gfw_ais_fishing_hours(spatial_resolution = 'LOW',
                              temporal_resolution = 'DAILY',
                              start_date = '2023-01-01',
                              end_date = '2024-01-01',
