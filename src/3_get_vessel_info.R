@@ -6,7 +6,7 @@ library(dplyr)
 # Una búsqueda simple
 # El primer parámetro es query
 
-info_vessel <- get_vessel_info(query = 431782000, # puede ser un elemento o un vector
+info_vessel <- gfw_vessel_info(query = 431782000, # puede ser un elemento o un vector
                                search_type = "search",
                                key = gfw_auth())
 
@@ -34,7 +34,6 @@ info_vessel$selfReportedInfo
 info_vessel$selfReportedInfo$ssvid
 info_vessel$selfReportedInfo$imo
 names(info_vessel$selfReportedInfo)
-View(info_vessel$selfReportedInfo)
 
 # el mmsi - ssvid
 info_vessel$selfReportedInfo$ssvid
@@ -53,7 +52,6 @@ info_vessel$selfReportedInfo[, c("index", "vesselId")]
 # Información de los registros en registryInfo
 info_vessel$registryInfo # los dos barcos
 
-View(info_vessel$registryInfo)
 
 # ¡Hay información complementaria! El IMO del segundo que no estaba en AIS,
 # también call sign, tonnage, tipo de pesca (geartype - si es algo general como
@@ -78,9 +76,6 @@ info_vessel$registryInfo
 info_vessel$registryOwners
 info_vessel$registryOwners %>% unnest(sourceCode)
 
-View(info_vessel$combinedSourcesInfo)
-View(info_vessel$registryInfo)
-View(info_vessel$selfReportedInfo)
 
 # podemos explorar las fechas en las que el mmsi fue utilizado en cada barco:
 info_vessel$selfReportedInfo[c("transmissionDateFrom", "transmissionDateTo", "ssvid", "index", "flag")]
