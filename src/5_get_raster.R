@@ -5,12 +5,12 @@ library(tmap)
 
 # se pueden hacer búsquedas para áreas predefinidas (EEZ, areas marinas protegidas MPA e RFMOs/Orops)
 
-?get_raster()
+# ?get_raster()
 # region_source = "EEZ
 # region = um código!
 
-# a gente busca o código pelo get_region_id()
-get_region_id(region_name = "Peru",
+# a gente busca o código pelo gfw_region_id()
+gfw_region_id(region = "Peru",
               region_source = "EEZ")
 #código 8432
 peru <- 8432
@@ -85,7 +85,7 @@ peru_fisheff %>% filter(Flag == "ARG")
 
 
 # hay otras opciones para obtener códigos de áreas marinas protegidas y OROPS/RFMOs
-get_region_id(region_name = "Abrolhos", region_source = "MPA")
+gfw_region_id(region = "Abrolhos", region_source = "MPA")
 
 
 
@@ -94,15 +94,15 @@ get_region_id(region_name = "Abrolhos", region_source = "MPA")
 # paquete sf
 # shapefile de ejemplo:
 ?gfwr
-data(test_shape)
+data(gfw_test_shape)
 
 library(tmap)
 tmap_mode("view")
 tm_basemap() +
-tm_shape(test_shape) +
+tm_shape(gfw_test_shape) +
 tm_borders()
 
-test_shape
+gfw_test_shape
 
 # un objeto sf
 #sf::read_sf()
@@ -114,7 +114,7 @@ fishing_effort <- get_raster(spatial_resolution = 'LOW',
                              end_date = '2021-10-01',
                              group_by = "FLAG",
                              region_source = 'USER_SHAPEFILE',
-                             region = test_shape
+                             region = gfw_test_shape
                              )
 
 fishing_effort
